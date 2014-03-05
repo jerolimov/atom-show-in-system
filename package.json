@@ -1,0 +1,14 @@
+{
+  "name": "open-within-system",
+  "main": "./lib/open-within-system",
+  "version": "0.1.0",
+  "description": "atom.io package to open files or directories within the system file manager",
+  "activationEvents": ["open-within-system:show", "open-within-system:open"],
+  "repository": "https://github.com/jerolimov/atom-open-within-system",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.60.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,7 @@
+'context-menu':
+  '.tree-view':
+    'Show within System': 'open-within-system:show'
+    'Open within System': 'open-within-system:open'
+  '.tab':
+    'Show within System': 'open-within-system:show'
+    'Open within System': 'open-within-system:open'
