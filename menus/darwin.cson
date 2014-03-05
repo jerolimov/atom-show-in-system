@@ -1,0 +1,7 @@
+'context-menu':
+  '.platform-darwin .tree-view':
+    'Show in Finder': 'open-within-system:show'
+    'Open with Finder': 'open-within-system:open'
+  '.platform-darwin .tab':
+    'Show in Finder': 'open-within-system:show'
+    'Open with Finder': 'open-within-system:open'

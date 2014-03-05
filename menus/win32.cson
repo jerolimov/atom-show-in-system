@@ -1,0 +1,7 @@
+'context-menu':
+  '.platform-win32 .tree-view':
+    'Show in Explorer': 'open-within-system:show'
+    'Open with Explorer': 'open-within-system:open'
+  '.platform-win32 .tab':
+    'Show in Explorer': 'open-within-system:show'
+    'Open with Explorer': 'open-within-system:open'

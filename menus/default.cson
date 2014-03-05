@@ -1,0 +1,7 @@
+'context-menu':
+  'body:not(.platform-darwin):not(.platform-win32) .tree-view':
+    'Show in file explorer': 'open-within-system:show'
+    'Open default application': 'open-within-system:open'
+  'body:not(.platform-darwin):not(.platform-win32) .tab':
+    'Show in file explorer': 'open-within-system:show'
+    'Open default application': 'open-within-system:open'
