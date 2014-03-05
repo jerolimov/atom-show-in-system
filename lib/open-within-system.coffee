@@ -17,13 +17,19 @@ module.exports =
   # Call native/shell open item in folder method for the given view.
   show: (view) ->
     path = @getPath(view)
-    console.log('Show item in folder: ' + path)
+    if !path
+      console.error('Open within system: Path not found')
+      return
+    console.log('Open within system: Will show item in folder: ' + path)
     shell.showItemInFolder(path)
   
   # Call native/shell open item method for the given view.
   open: (view) ->
     path = @getPath(view)
-    console.log('Open item: ' + path)
+    if !path
+      console.error('Open within system: Path not found')
+      return
+    console.log('Open within system: Will open item: ' + path)
     shell.openItem(path)
   
   # Get (all) parent view(s) with class type file, directory OR tab.
