@@ -18,19 +18,15 @@ module.exports =
   show: (view) ->
     path = @getPath(view)
     if !path
-      console.error('Open within system: Path not found')
-      return
-    console.log('Open within system: Will show item in folder: ' + path)
-    shell.showItemInFolder(path)
+      console.warn('Open in shell: Path not found. File not saved?')
+    shell.showItemInFolder(path) if path
   
   # Call native/shell open item method for the given view.
   open: (view) ->
     path = @getPath(view)
     if !path
-      console.error('Open within system: Path not found')
-      return
-    console.log('Open within system: Will open item: ' + path)
-    shell.openItem(path)
+      console.warn('Open in shell: Path not found. File not saved?')
+    shell.openItem(path) if path
   
   # Get (all) parent view(s) with class type file, directory OR tab.
   # The first one will be our selected item...
@@ -41,11 +37,11 @@ module.exports =
   # the tree-view and the tab-view module.
   getPath: (view) ->
     if !view or !view.length
-      console.error('Open within system: View not found!')
+      console.error('Open in shell: View not found!')
     else if view.is('.file') || view.is('.directory')
       return view.getPath()
     else if view.is('.tab')
       return view.item.getPath()
     else
-      console.error('Open within system: Unexpected view type!')
+      console.error('Open in shell: Unexpected view type!')
   
