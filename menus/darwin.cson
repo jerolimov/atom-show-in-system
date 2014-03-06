@@ -2,6 +2,8 @@
   '.platform-darwin .tree-view':
     'Show in Finder': 'show-in-system:show'
     'Open with Finder': 'show-in-system:open'
+    'Open path in Terminal': 'show-in-system:terminal'
   '.platform-darwin .tab':
     'Show in Finder': 'show-in-system:show'
     'Open with Finder': 'show-in-system:open'
+    'Open path in Terminal': 'show-in-system:terminal'
