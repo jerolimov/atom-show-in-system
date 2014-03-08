@@ -4,6 +4,10 @@ p = require 'path'
 exec = require("child_process").exec
 
 module.exports =
+  configDefaults: {
+    app: 'Terminal.app'
+    args: ''
+  },
   # Register open, show and terminal commnads
   activate: ->
     atom.workspaceView.command 'show-in-system:terminal', (event) =>
@@ -40,7 +44,9 @@ module.exports =
       console.warn('Show in system: Path not found. File not saved?')
     if !dir
       console.warn('Show in system: Directory not found. File not saved?')
-    exec "open -a Terminal.app #{dir}" if path && dir
+    app = atom.config.get('open-terminal-here.app')
+    args = atom.config.get('open-terminal-here.args')
+    exec "open -a #{app} #{args} #{dir}" if path && dir && app
 
   # Get (all) parent view(s) with class type file, directory OR tab.
   # The first one will be our selected item...
