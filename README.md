@@ -8,7 +8,7 @@ A small extension which **adds new entries to the file tree context-menu and
 to the context-menu of the editor tabs**.
 
 * Add `Show in Finder / Explorer` to each editor tab.  
-  (Removed rom the tree context-menu in v0.3 because it is not part of the preinstalled Atom packages.)
+  (Removed from the tree context-menu in v0.3 because this feature is now part of the preinstalled Atom packages.)
 * Add `Open with default application` in the file tree and tab context-menu.
 * Add `Open in Terminal` for folders and files (scripts) in the file tree and tab context-menu. Current this is OSX-only. Feedback for other systems or Pull Requests are welcome.
 
