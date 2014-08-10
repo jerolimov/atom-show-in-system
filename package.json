@@ -1,7 +1,7 @@
 {
   "name": "show-in-system",
   "main": "./lib/show-in-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "atom.io package to show and open files or directories in the system file manager",
   "activationEvents": ["show-in-system:show", "show-in-system:open", "show-in-system:terminal"],
   "repository": "https://github.com/jerolimov/atom-show-in-system",
