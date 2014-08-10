@@ -1,8 +1,8 @@
 'context-menu':
   '.platform-darwin .tree-view':
-    'Open with Finder': 'show-in-system:open'
     'Open in Terminal': 'show-in-system:terminal'
+    'Open with default application': 'show-in-system:open'
   '.platform-darwin .tab':
     'Show in Finder': 'show-in-system:show'
-    'Open with Finder': 'show-in-system:open'
     'Open in Terminal': 'show-in-system:terminal'
+    'Open with default application': 'show-in-system:open'
