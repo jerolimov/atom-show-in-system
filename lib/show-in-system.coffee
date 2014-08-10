@@ -1,21 +1,21 @@
 {$} = require 'atom'
 shell = require 'shell'
-p = require 'path'
-exec = require("child_process").exec
+child_process = require 'child_process'
 
 module.exports =
   configDefaults: {
     app: 'Terminal.app'
     args: ''
-  },
+  }
+
   # Register open, show and terminal commnads
   activate: ->
-    atom.workspaceView.command 'show-in-system:terminal', (event) =>
-      @terminal(@getView(event.target))
     atom.workspaceView.command 'show-in-system:show', (event) =>
       @show(@getView(event.target))
     atom.workspaceView.command 'show-in-system:open', (event) =>
       @open(@getView(event.target))
+    atom.workspaceView.command 'show-in-system:terminal', (event) =>
+      @terminal(@getView(event.target))
 
   # Cleanup
   deactivate: ->
@@ -39,14 +39,11 @@ module.exports =
 
   terminal: (view) ->
     path = @getPath(view)
-    dir = p.dirname(path) if path
     if !path
       console.warn('Show in system: Path not found. File not saved?')
-    if !dir
-      console.warn('Show in system: Directory not found. File not saved?')
-    app = atom.config.get('open-terminal-here.app')
-    args = atom.config.get('open-terminal-here.args')
-    exec "open -a #{app} #{args} #{dir}" if path && dir && app
+    app = atom.config.get('show-in-system.app')
+    args = atom.config.get('show-in-system.args')
+    child_process.exec "open -a #{app} #{args} #{path}" if path
 
   # Get (all) parent view(s) with class type file, directory OR tab.
   # The first one will be our selected item...
@@ -64,4 +61,3 @@ module.exports =
       return view.item.getPath()
     else
       console.error('Show in system: Unexpected view type!')
-
