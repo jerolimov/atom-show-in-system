@@ -10,5 +10,6 @@
     "atom": ">0.60.0"
   },
   "dependencies": {
+    "event-kit": "^1.0.0"
   }
 }
