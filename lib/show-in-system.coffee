@@ -3,29 +3,18 @@ shell = require 'shell'
 child_process = require 'child_process'
 
 module.exports =
-  config:
-    app:
-      title: 'Terminal application'
-      description: 'Executable which will be start with the "Open in Terminal" menu entry.'
-      type: 'string'
-      default: 'Terminal.app'
-    args:
-      title: 'Terminal application arguments'
-      description: 'Optional: Additional arguments when start a new terminal.'
-      type: 'string'
-      default: ''
-
-  # Register open, show and terminal commnads
+  # Register show and open
   activate: ->
     @disposables = new CompositeDisposable
     @disposables.add atom.commands.add('.tab, .tree-view .selected', {
       'show-in-system:show': (event) => @show(event.currentTarget)
       'show-in-system:open': (event) => @open(event.currentTarget)
-      'show-in-system:terminal': (event) => @terminal(event.currentTarget)
     })
 
   # Cleanup
-  deactivate: -> @disposables.dispose()
+  deactivate: ->
+    @disposables?.dispose()
+    @disposables = null
 
   # Call native/shell open item in folder method for the given view.
   show: (target) ->
@@ -40,14 +29,6 @@ module.exports =
     if !path
       console.warn('Show in system: Path not found. File not saved?')
     shell.openItem(path) if path
-
-  terminal: (target) ->
-    path = @getPath(target)
-    if !path
-      console.warn('Show in system: Path not found. File not saved?')
-    app = atom.config.get('show-in-system.app')
-    args = atom.config.get('show-in-system.args')
-    child_process.exec "#{app} #{args} #{path}" if path
 
   # Extract the path from the target: can be a tree-view or tab item.
   getPath: (target) -> return target.getPath?() ? target.item?.getPath()

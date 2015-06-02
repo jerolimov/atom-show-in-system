@@ -9,4 +9,6 @@
 	}, {
 		'label': 'Open with default application',
 		'command': 'show-in-system:open'
+	}, {
+		'type': 'separator'
 	} ]
