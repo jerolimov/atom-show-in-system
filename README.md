@@ -1,3 +1,11 @@
+**Deprecated. But still ready for the [atom.io](http://atom.io) 1.0 release.**
+
+I developed this plugin for an early [atom.io](http://atom.io) version where
+this function was missing. The latest version contains already the
+"Show in Finder" menu, but not the "Open with default application" entry.
+
+This plugin provides both functions - but will not be supported in the future.
+
 ## Show and open files within your file manager and terminal
 
 You can install this small [atom.io](http://atom.io) extension in the
