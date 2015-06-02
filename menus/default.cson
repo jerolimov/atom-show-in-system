@@ -1,6 +1,12 @@
 'context-menu':
-  'body:not(.platform-darwin):not(.platform-win32) .tree-view':
-    'Open with default application': 'show-in-system:open'
-  'body:not(.platform-darwin):not(.platform-win32) .tab':
-    'Show in file explorer': 'show-in-system:show'
-    'Open with default application': 'show-in-system:open'
+	'body:not(.platform-darwin):not(.platform-win32) .tree-view': [ {
+		'label': 'Open with default application',
+		'command': 'show-in-system:open'
+	} ]
+	'body:not(.platform-darwin):not(.platform-win32) .tab': [ {
+		'label': 'Show in file explorer',
+		'command': 'show-in-system:show'
+	}, {
+		'label': 'Open with default application',
+		'command': 'show-in-system:open'
+	} ]

@@ -1,8 +1,20 @@
 'context-menu':
-  '.platform-darwin .tree-view':
-    'Open in Terminal': 'show-in-system:terminal'
-    'Open with default application': 'show-in-system:open'
-  '.platform-darwin .tab':
-    'Show in Finder': 'show-in-system:show'
-    'Open in Terminal': 'show-in-system:terminal'
-    'Open with default application': 'show-in-system:open'
+	'.platform-darwin .tree-view': [ {
+		'label': 'xOpen in Terminal',
+		'command': 'show-in-system:terminal'
+	}, {
+		'label': 'xOpen with default application',
+		'show-in-system:open'
+	} ]
+	'.platform-darwin .tab': [ {
+		'label': 'xShow in Finder',
+		'command': 'show-in-system:show'
+	}, {
+		'label': 'xOpen in Terminal',
+		'command': 'show-in-system:terminal'
+	}, {
+		'label': 'xOpen with default application',
+		'command': 'show-in-system:open'
+	}, {
+		'type': 'separator'
+	} ]

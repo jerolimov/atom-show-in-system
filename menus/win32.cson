@@ -1,6 +1,12 @@
 'context-menu':
-  '.platform-win32 .tree-view':
-    'Open with default application': 'show-in-system:open'
-  '.platform-win32 .tab':
-    'Show in Explorer': 'show-in-system:show'
-    'Open with default application': 'show-in-system:open'
+	'.platform-win32 .tree-view': [ {
+		'label': 'Open with default application',
+		'command': 'show-in-system:open'
+	} ]
+	'.platform-win32 .tab': [ {
+		'label': 'Show in Explorer',
+		'command': 'show-in-system:show'
+	}, {
+		'label': 'Open with default application',
+		'command': 'show-in-system:open'
+	} ]
