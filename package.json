@@ -4,7 +4,7 @@
 	"version": "0.4.0",
 	"description": "atom.io extension which show and open files within your file manager and terminal",
 	"activationCommands": {
-		"atom-text-editor": [
+		"atom-workspace": [
 			"show-in-system:show",
 			"show-in-system:open",
 			"show-in-system:terminal"

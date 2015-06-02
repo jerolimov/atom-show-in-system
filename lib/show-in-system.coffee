@@ -1,13 +1,19 @@
-{$} = require 'atom'
+{CompositeDisposable} = require 'atom'
 shell = require 'shell'
 child_process = require 'child_process'
-{CompositeDisposable} = require 'event-kit'
 
 module.exports =
-  configDefaults: {
-    app: 'Terminal.app'
-    args: ''
-  }
+  config:
+    app:
+      title: 'Terminal application'
+      description: 'Executable which will be start with the "Open in Terminal" menu entry.'
+      type: 'string'
+      default: 'Terminal.app'
+    args:
+      title: 'Terminal application arguments'
+      description: 'Optional: Additional arguments when start a new terminal.'
+      type: 'string'
+      default: ''
 
   # Register open, show and terminal commnads
   activate: ->
