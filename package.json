@@ -2,7 +2,7 @@
 	"name": "show-in-system",
 	"main": "./lib/show-in-system",
 	"version": "0.4.0",
-	"description": "atom.io extension which show and open files within your file manager and terminal",
+	"description": "atom.io extension which show and open files within your system",
 	"activationCommands": {
 		"atom-workspace": [
 			"show-in-system:show",
