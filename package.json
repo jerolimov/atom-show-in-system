@@ -1,14 +1,20 @@
 {
-  "name": "show-in-system",
-  "main": "./lib/show-in-system",
-  "version": "0.3.0",
-  "description": "atom.io package to show and open files or directories in the system file manager",
-  "activationEvents": ["show-in-system:show", "show-in-system:open", "show-in-system:terminal"],
-  "repository": "https://github.com/jerolimov/atom-show-in-system",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.60.0"
-  },
-  "dependencies": {
-  }
+	"name": "show-in-system",
+	"main": "./lib/show-in-system",
+	"version": "0.4.0",
+	"description": "atom.io extension which show and open files within your file manager and terminal",
+	"activationCommands": {
+		"atom-text-editor": [
+			"show-in-system:show",
+			"show-in-system:open",
+			"show-in-system:terminal"
+		]
+	},
+	"repository": "https://github.com/jerolimov/atom-show-in-system",
+	"license": "MIT",
+	"engines": {
+		"atom": ">=0.200.0 <2.0.0"
+	},
+	"dependencies": {
+	}
 }
