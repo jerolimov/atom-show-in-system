@@ -1,15 +1,15 @@
 **Deprecated. But still ready for the [atom.io](http://atom.io) 1.0 release.**
 
-I developed this plugin for an early [atom.io](http://atom.io) version where
-this function was missing. The latest version contains already the
-"Show in Finder" menu, but not the "Open with default application" entry.
+I developed this plugin for an early atom.io version where this function
+was missing. The latest version contains already the "Show in Finder" menu,
+but not the "Open with default application" menu entry.
 
 This plugin provides both functions - but will not be supported in the future.
 
-## Show and open files within your file manager and terminal
+## Show and open files within your system
 
 You can install this small [atom.io](http://atom.io) extension in the
-`Preferences... > Install` dialog OR with the atom package manager:
+`Preferences... > Install` dialog or with the atom package manager:
 
     apm install show-in-system
 
