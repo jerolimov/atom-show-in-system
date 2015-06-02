@@ -6,15 +6,12 @@
 	"activationCommands": {
 		"atom-workspace": [
 			"show-in-system:show",
-			"show-in-system:open",
-			"show-in-system:terminal"
+			"show-in-system:open"
 		]
 	},
 	"repository": "https://github.com/jerolimov/atom-show-in-system",
 	"license": "MIT",
 	"engines": {
 		"atom": ">=0.200.0 <2.0.0"
-	},
-	"dependencies": {
 	}
 }
