@@ -1,16 +1,19 @@
-## [atom.io](http://atom.io) package to show and open files or directories in the system file manager or terminal
+## Show and open files within your file manager and terminal
 
-You can simple install this plugin with the atom package manager or within Atom itself:
+You can install this small [atom.io](http://atom.io) extension in the
+`Preferences... > Packages` dialog OR with the atom package manager:
 
     apm install show-in-system
 
-A small extension which **adds new entries to the file tree context-menu and
-to the context-menu of the editor tabs**.
+This extension adds new sub menu entries to the context-menu of the
+file/project tree and the editor tabs.
 
 * Add `Show in Finder / Explorer` to each editor tab.  
-  (Removed from the tree context-menu in v0.3 because this feature is now part of the preinstalled Atom packages.)
+* Add `Open in Terminal` for folders and files (scripts) in the file tree and
+  tab context-menu.
+  Current this is an OSX-only feature.
+  Pull requests for other systems are welcome.
 * Add `Open with default application` in the file tree and tab context-menu.
-* Add `Open in Terminal` for folders and files (scripts) in the file tree and tab context-menu. Current this is OSX-only. Feedback for other systems or Pull Requests are welcome.
 
 ![Screenshot file view](https://github.com/jerolimov/atom-show-in-system/raw/master/screenshot-file-view.png)
 
