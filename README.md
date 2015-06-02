@@ -1,7 +1,7 @@
 ## Show and open files within your file manager and terminal
 
 You can install this small [atom.io](http://atom.io) extension in the
-`Preferences... > Packages` dialog OR with the atom package manager:
+`Preferences... > Install` dialog OR with the atom package manager:
 
     apm install show-in-system
 
